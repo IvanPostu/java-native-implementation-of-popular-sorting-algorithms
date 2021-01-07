@@ -3,8 +3,10 @@ package com.ivan.app;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-import com.ivan.app.sort.SortCppNativeImpl;
-import com.ivan.app.sort.SortType;
+import com.ivan.app.sort.SortAlgorithm;
+import com.ivan.app.sort.SortAlgorithmFactory;
+import com.ivan.app.sort.SortAlgorithmFactory.ImplementationType;
+import com.ivan.app.sort.SortAlgorithmFactory.SortType;
 
 public class Main {
 
@@ -17,7 +19,10 @@ public class Main {
     }
     System.out.println();    
     
-    new SortCppNativeImpl().sort(arr, arr.length, SortType.INSERTION);
+    SortAlgorithm sortAlgorithm = SortAlgorithmFactory
+      .createInstance(SortType.SELECTION_SORT, ImplementationType.C);
+
+    sortAlgorithm.sort(arr);
     
     System.out.println("Sorted array: ");
     for(int a : arr){

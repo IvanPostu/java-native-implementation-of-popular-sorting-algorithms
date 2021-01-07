@@ -1,8 +1,7 @@
 package com.ivan.app.sort;
 
-public class SortJavaImpl implements Sort {
-
-
+class SelectionSortAlgorithmJavaImpl implements SortAlgorithm {
+  
   private void selectionSort(int[] arr, int size){
     int tempIndex;
     for(int i=0; i<size-1; i++){
@@ -20,10 +19,8 @@ public class SortJavaImpl implements Sort {
   }
 
   @Override
-  public void sort(int[] arr, int size, SortType sortType) {
-    if(SortType.INSERTION.equals(sortType)){
-      selectionSort(arr, size);
-    }
+  public void sort(int[] arr) {
+    selectionSort(arr, arr.length);
   }
-  
+
 }

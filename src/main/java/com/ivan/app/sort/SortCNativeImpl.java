@@ -1,21 +1,26 @@
-package com.ivan.app.sort;
+// package com.ivan.app.sort;
 
-import com.ivan.app.NativeLibUtils;
+// import com.ivan.app.NativeLibUtils;
 
-public class SortCNativeImpl implements Sort {
+// public class SortCNativeImpl implements SortAlgorithm {
 
-  static {
-    NativeLibUtils.resolveLibrary("libSortCNativeImpl_c.so");
-  }
+//   static {
+//     NativeLibUtils.resolveLibrary("libSortCNativeImpl_c.so");
+//   }
 
-  private native void selectionSort(int[] arr, int size);
+//   private native void selectionSort(int[] arr, int size);
 
-  @Override
-  public void sort(int[] arr, int size, SortType sortType) {
+//   private native void mergeSort(int[] arr, int size);
 
-    if (SortType.INSERTION.equals(sortType)) {
-      selectionSort(arr, size);
-    }
-  }
+//   @Override
+//   public void sort(int[] arr, int size, SortType sortType) {
 
-}
+//     if (SortType.INSERTION.equals(sortType)) {
+//       selectionSort(arr, size);
+//     }
+//     if (SortType.MERGE.equals(sortType)) {
+//       selectionSort(arr, size);
+//     }
+//   }
+
+// }
