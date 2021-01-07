@@ -1,5 +1,5 @@
 #include <cstdio>
-#include "SortCppNativeImpl.h"
+#include "com_ivan_app_sort_SortCppNativeImpl.h"
 
 void swap(int *a, int *b)
 {
@@ -27,7 +27,7 @@ void selectionSort(int *arr, unsigned int size)
 
 }
 
-JNIEXPORT void JNICALL Java_SortCppNativeImpl_selectionSort
+JNIEXPORT void JNICALL Java_com_ivan_app_sort_SortCppNativeImpl_selectionSort
   (JNIEnv *env, jobject jObj, jintArray jArr, jint jSize)
 {
   unsigned int size = (unsigned int)jSize;

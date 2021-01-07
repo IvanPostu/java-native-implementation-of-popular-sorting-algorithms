@@ -1,0 +1,32 @@
+group = 'com.ivan.app'
+version = '1.0'
+
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+sourceCompatibility = 8
+targetCompatibility = 8
+
+sourceSets {
+  main {
+    resources { srcDirs = ["src/main/resources"]; exclude "**/*.txt" }
+  }
+}
+
+
+task buildCSources(type:Exec) {
+  commandLine './scripts/buildCSources.sh', projectDir, "${projectDir}/build/resources/main"
+}
+buildCSources.dependsOn(processResources, compileJava)
+
+task buildCppSources(type:Exec) {
+  commandLine './scripts/buildCppSources.sh', projectDir, "${projectDir}/build/resources/main"
+}
+buildCppSources.dependsOn(processResources, compileJava)
+
+build.dependsOn(buildCSources, buildCppSources)
+
+repositories {
+  mavenCentral()
+}
+

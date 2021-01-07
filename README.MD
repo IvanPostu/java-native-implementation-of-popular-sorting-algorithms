@@ -9,6 +9,12 @@
 - [x] Selection sort
 - [ ] Buble sort
 
+## Part 2
+
+- [x] Automate build with gradle + bash scripts
+- [ ] Write unit tests
+
+
 ## Useful links
 
 + https://www.ibm.com/developerworks/systems/library/es-jniexamples.html

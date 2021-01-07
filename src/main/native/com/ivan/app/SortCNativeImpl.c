@@ -1,4 +1,4 @@
-#include "SortCNativeImpl.h"
+#include "com_ivan_app_sort_SortCNativeImpl.h"
 
 void swap(int *a, int *b)
 {
@@ -26,7 +26,7 @@ void selectionSort(int *arr, unsigned int size)
 
 }
 
-JNIEXPORT void JNICALL Java_SortCNativeImpl_selectionSort
+JNIEXPORT void JNICALL Java_com_ivan_app_sort_SortCNativeImpl_selectionSort
   (JNIEnv *env, jobject jObj, jintArray jArr, jint jSize)
 {
   unsigned int size = (unsigned int)jSize;

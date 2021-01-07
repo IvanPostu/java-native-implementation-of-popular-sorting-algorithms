@@ -1,9 +1,11 @@
+package com.ivan.app.sort;
 
+import com.ivan.app.NativeLibUtils;
 
 public class SortCppNativeImpl implements Sort {
 
   static {
-    System.loadLibrary("sort_cpp");
+    NativeLibUtils.resolveLibrary("libSortCppNativeImpl_cpp.so");
   }
 
   private native void selectionSort(int[] arr, int size);

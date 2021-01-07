@@ -1,16 +1,21 @@
+package com.ivan.app.sort;
+
+import com.ivan.app.NativeLibUtils;
+
 public class SortCNativeImpl implements Sort {
 
   static {
-    System.loadLibrary("sort_c");
+    NativeLibUtils.resolveLibrary("libSortCNativeImpl_c.so");
   }
 
   private native void selectionSort(int[] arr, int size);
 
   @Override
   public void sort(int[] arr, int size, SortType sortType) {
-    if(SortType.INSERTION.equals(sortType)){
+
+    if (SortType.INSERTION.equals(sortType)) {
       selectionSort(arr, size);
     }
   }
-  
+
 }
