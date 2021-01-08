@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 public final class NativeLibUtils {
   static public void resolveLibrary(final String libName) {
     ClassLoader loader = Thread.currentThread().getContextClassLoader();
-    URL res = loader.getResource(libName);
+    URL res = loader.getResource("libs/"+libName);
     File file;
     try {
       file = Paths.get(res.toURI()).toFile();

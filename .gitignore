@@ -57,3 +57,4 @@ temp.txt
 test.out
 **/pg_data
 .vscode
+src/main/resources/libs/*.so

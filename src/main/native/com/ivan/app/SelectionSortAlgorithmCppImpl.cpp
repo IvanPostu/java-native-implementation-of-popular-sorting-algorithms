@@ -31,10 +31,10 @@ void selectionSort(int *arr, unsigned int size)
   unsigned int temp;
   unsigned int i, j;
 
-  for(i=0; i<size; i++)
+  for(i=0; i<size-1; i++)
   {
     temp=i;
-    for(j=i; j<size; j++)
+    for(j=i+1; j<size; j++)
     {
       if(*(arr + temp) > *(arr+j))
         temp=j;

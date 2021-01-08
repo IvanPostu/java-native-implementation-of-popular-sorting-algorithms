@@ -9,13 +9,22 @@
 - [x] Selection sort
 - [ ] Buble sort
 
-## Part 2
+## Part 2 ( Unit tests: Sorting algorithms Java, native C, native C++ )
+
+- [x] Merge sort
+- [ ] Quick sort
+- [ ] Heap sort
+- [ ] Insertion sort
+- [x] Selection sort
+- [ ] Buble sort
+
+## Part 3
 - [x] Write bash scripts for building Java, C and C++ src. code
 - [x] Automate build with gradle + bash scripts
 - [ ] Use cmake instead bash scripts
 - [ ] Write unit tests
 
-## Part 3 (S.O.L.I.D.)
+## Part 4 (S.O.L.I.D.)
 
 - [x] Single principle (every entity should have responsibility over a single part of program's functionality.)
 - [x] Open closed (entities should be open for extension, but closed for modification.)
@@ -23,7 +32,7 @@
 - [x] Interface segregation (no client should be forced to depend on methods it does not use)
 - [x] Dependency inversion (High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details  should depend on abstractions.) Example package sort with abstract entity SortAlgorithm
 
-## Part 4 (Design Patterns)
+## Part 5 (Design Patterns)
 - [x] Abstract Factory (com.ivan.app.sort.SortAlgorithmFactory)
 
 ## Useful links

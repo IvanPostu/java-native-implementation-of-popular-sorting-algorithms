@@ -2,7 +2,7 @@
 #include "com_ivan_app_sort_MergeSortAlgorithmCImpl.h"
 
 void mergeSort(int *arr, unsigned int size);
-void merge(int*arr, int*left, int*right, unsigned int leftSize, unsigned int rightSize);
+void merge(int *arr, int *left, int *right, unsigned int leftSize, unsigned int rightSize);
 
 JNIEXPORT void JNICALL Java_com_ivan_app_sort_MergeSortAlgorithmCImpl_sort
   (JNIEnv *env, jobject jObj, jintArray jArr, jint jSize)
@@ -66,7 +66,7 @@ void merge(int *arr, int *left, int *right, unsigned int leftSize, unsigned int 
     *(arr+k++) = *(left+i++);
   }
 
-  while(i<rightSize)
+  while(j<rightSize)
   {
     *(arr+k++) = *(right+j++);
   }
