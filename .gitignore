@@ -56,5 +56,6 @@ temp.txt
 /bin
 test.out
 **/pg_data
-.vscode
 src/main/resources/libs/*.so
+src/main/resources/nativeLibs/*.so
+.vscode

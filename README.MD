@@ -22,7 +22,8 @@
 - [x] Write bash scripts for building Java, C and C++ src. code
 - [x] Automate build with gradle + bash scripts
 - [ ] Use cmake instead bash scripts
-- [ ] Write unit tests
+- [x] Add junit5 to project
+- [x] Add log4j2 to project
 
 ## Part 4 (S.O.L.I.D.)
 
