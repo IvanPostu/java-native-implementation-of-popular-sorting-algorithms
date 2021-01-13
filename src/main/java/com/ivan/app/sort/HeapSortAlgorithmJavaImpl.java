@@ -1,7 +1,5 @@
 package com.ivan.app.sort;
 
-import java.util.Arrays;
-
 class HeapSortAlgorithmJavaImpl implements SortAlgorithm {
 
   void heapify(int[] arr, int size, int i) {
@@ -38,25 +36,6 @@ class HeapSortAlgorithmJavaImpl implements SortAlgorithm {
   @Override
   public void sort(int[] arr) {
     heapSort(arr, arr.length);
-  }
-
-  public static void main(String[] args) {
-    HeapSortAlgorithmJavaImpl instance = new HeapSortAlgorithmJavaImpl();
-
-    int[] arr = { 6, 5, 3, 1, 8, 7, 2, 4 };
-    instance.sort(arr);
-
-    int[] expectedArr = Arrays.copyOf(arr, arr.length);
-    Arrays.sort(expectedArr);
-
-    int count = 0;
-    for (int i = 0; i < expectedArr.length; i++) {
-      if (expectedArr[i] != arr[i])
-        count++;
-    }
-
-    System.out.println(count);
-
   }
 
 }
