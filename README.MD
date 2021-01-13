@@ -4,24 +4,23 @@
 
 - [x] Merge sort
 - [ ] Quick sort
-- [ ] Heap sort
+- [x] Heap sort
 - [ ] Insertion sort
 - [x] Selection sort
-- [ ] Buble sort
+- [ ] Bubble sort
 
 ## Part 2 ( Unit tests: Sorting algorithms Java, native C, native C++ )
 
 - [x] Merge sort
 - [ ] Quick sort
-- [ ] Heap sort
+- [x] Heap sort
 - [ ] Insertion sort
 - [x] Selection sort
-- [ ] Buble sort
+- [ ] Bubble sort
 
 ## Part 3
 - [x] Write bash scripts for building Java, C and C++ src. code
 - [x] Automate build with gradle + bash scripts
-- [ ] Use cmake instead bash scripts
 - [x] Add junit5 to project
 - [x] Add log4j2 to project
 
@@ -36,9 +35,15 @@
 ## Part 5 (Design Patterns)
 - [x] Abstract Factory (com.ivan.app.sort.SortAlgorithmFactory)
 
+## Gradle default + custom build lifecycles
+
+![](./forReadme/gradle-build-lifecycle+customTasks.png)
+
 ## Useful links
 
 + https://www.ibm.com/developerworks/systems/library/es-jniexamples.html
 + https://www.owsiak.org/simple-jni-passing-array-from-java-to-c/
 + https://en.wikipedia.org/wiki/SOLID
++ https://en.wikipedia.org/wiki/Heapsort
++ https://www.javatpoint.com/heap-sort
 
