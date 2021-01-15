@@ -7,22 +7,43 @@ apply plugin: 'java'
 sourceCompatibility = 8
 targetCompatibility = 8
 
-final JUNIT_VERSION = '5.7.0'
-
 sourceSets {
   main {
     resources { srcDirs = ["src/main/resources"]; exclude "**/*.txt" }
   }
 }
 
-
 task buildCSources(type:Exec) {
-  commandLine './scripts/buildCSources.sh', projectDir, "${projectDir}/src/main/resources/nativeLibs"
+  /**
+  * Command line argument, example -DfilenameKeywords="example1 example2"
+  * can be null
+  * */
+  String filenameKeywords = System.getProperty('filenameKeywords')
+  filenameKeywords = filenameKeywords == null ? "" : filenameKeywords
+  
+  commandLine(
+    './scripts/buildCSources.bash', 
+    projectDir, 
+    "${projectDir}/src/main/resources/nativeLibs", 
+    filenameKeywords
+  )
 }
 buildCSources.dependsOn(processResources, compileJava)
 
 task buildCppSources(type:Exec) {
-  commandLine './scripts/buildCppSources.sh', projectDir, "${projectDir}/src/main/resources/nativeLibs"
+  /**
+  * Command line argument, example -DfilenameKeywords="example1 example2"
+  * can be null
+  * */
+  String filenameKeywords = System.getProperty('filenameKeywords')
+  filenameKeywords = filenameKeywords == null ? "" : filenameKeywords
+  
+  commandLine(
+    './scripts/buildCppSources.bash', 
+    projectDir, 
+    "${projectDir}/src/main/resources/nativeLibs", 
+    filenameKeywords
+  )
 }
 buildCppSources.dependsOn(processResources, compileJava)
 
@@ -64,6 +85,8 @@ test {
 repositories {
   mavenCentral()
 }
+
+final JUNIT_VERSION = '5.7.0'
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
