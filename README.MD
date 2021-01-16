@@ -3,20 +3,20 @@
 ## Part 1 ( Sorting algorithms Java, native C, native C++ )
 
 - [x] Merge sort
-- [ ] Quick sort
+- [x] Quick sort
 - [x] Heap sort
-- [ ] Insertion sort
+- [x] Insertion sort
 - [x] Selection sort
-- [ ] Bubble sort
+- [x] Bubble sort
 
 ## Part 2 ( Unit tests: Sorting algorithms Java, native C, native C++ )
 
 - [x] Merge sort
-- [ ] Quick sort
+- [x] Quick sort
 - [x] Heap sort
-- [ ] Insertion sort
+- [x] Insertion sort
 - [x] Selection sort
-- [ ] Bubble sort
+- [x] Bubble sort
 
 ## Part 3
 - [x] Write bash scripts for building Java, C and C++ src. code

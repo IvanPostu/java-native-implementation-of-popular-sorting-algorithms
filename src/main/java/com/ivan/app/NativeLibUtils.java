@@ -5,7 +5,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
 
-public final class NativeLibUtils {
+public abstract class NativeLibUtils {
   static public void resolveLibrary(final String libName) {
     ClassLoader loader = Thread.currentThread().getContextClassLoader();
     URL res = loader.getResource("nativeLibs/"+libName);
