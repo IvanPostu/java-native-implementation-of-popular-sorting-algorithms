@@ -19,8 +19,8 @@ function compileSources(){
     g++ -shared -o $distPath/lib${sourceFileNameWithoutExtension}_cpp.so \
       $f \
       -fPIC \
-      -I/usr/lib/jvm/java-8-openjdk-amd64/include \
-      -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux \
+      -I/usr/lib/jvm/java-8-openjdk/include \
+      -I/usr/lib/jvm/java-8-openjdk/include/linux \
       -I./build/generated/sources/headers/java/main \
       && echo -e "\x1B[01;92m$sourceFileName compiled with success!!! \x1B[0m"
   done

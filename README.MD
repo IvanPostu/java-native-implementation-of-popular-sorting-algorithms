@@ -47,3 +47,8 @@
 + https://en.wikipedia.org/wiki/Heapsort
 + https://www.javatpoint.com/heap-sort
 
+## Part 6 (Build and run)
+
+```bash
+$ ./gradlew compileJava buildCSources buildCppSources copyCompileDeps build
+```
